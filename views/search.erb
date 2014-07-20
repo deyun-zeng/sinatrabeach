@@ -1,0 +1,48 @@
+<div class="intro" style="height: <%= @section_height%>">
+  <div class="intro-body">
+  </div>
+</div>
+
+<div id="about" class="container content-section text-left" style="padding-top: 50px">
+  <div class="row">
+    <div class="span8">
+      <h3>Search Result For <%= @para_beach %></h3>
+      <div style="border: 1px solid #ababab; margin-bottom: 10px;"></div>
+      <ul>
+        <% @beachs.each do |beach|%>
+            <li>
+            <a href="/beach/<%= beach["_id"] %>" class="list-group-item " style=" border: 1px solid #e5e5e5;"              >
+              <h4 class="list-group-item-heading"><%= beach["name"] %></h4>
+              <h6 class="list-group-item-text"><%= beach["address"] %></h6>
+              <% beach["picture"].each do |p| %>
+                  <img src="<%= p %>" class="img-thumbnail" style="width: 90px ; height: 90px"/>
+              <% end %>
+            </a>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="span4">
+      <div class="col sidebar" style="border: 1px  solid #e5e5e5">
+        <div id="COMMERCE_MID" class="box typeB commerce v3"><div class="interior">
+          <dl>
+            <dt class="note fr">Sponsored links</dt>
+          </dl>
+        </div> </div>
+        <div id="google_csa_box_MID" class="csa search">
+          <div class="inner ">
+            <div id="google_csa_ad_unit_MID" style="width: 276px; font-weight: normal; text-align: center; height: 196px;"><iframe frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" scrolling="no" width="100%" name="{&quot;name&quot;:&quot;master-1&quot;,&quot;slave-1-1&quot;:{&quot;clicktrackUrl&quot;:&quot;http://www.tripadvisor.com/Commerce?p=GenericAds1&amp;geo=1&amp;from=Search&amp;area=BOT&amp;slot=0&amp;cnt=0&amp;oos=0&amp;url=www.gtripadvisorg.com%2Faclk&amp;partnerKey=1&amp;urlKey=1dd5cccdc6f4d10e3&amp;author=GenericAds1&amp;channelid=search&amp;clt=G&amp;doNotRedirect=true&quot;,&quot;container&quot;:&quot;google_csa_ad_unit_BOT&quot;,&quot;linkTarget&quot;:&quot;_blank&quot;,&quot;lines&quot;:2,&quot;colorTitleLink&quot;:&quot;#202d95&quot;,&quot;colorDomainLink&quot;:&quot;#589442&quot;,&quot;colorBackground&quot;:&quot;#faefd3&quot;,&quot;fontSizeDescription&quot;:&quot;11px&quot;,&quot;fontSizeDomainLink&quot;:&quot;11px&quot;,&quot;titleBold&quot;:1,&quot;rolloverLinkColor&quot;:&quot;#589442&quot;,&quot;clickableBackgrounds&quot;:true,&quot;adIconLocation&quot;:&quot;ad-left&quot;,&quot;domainLinkAboveDescription&quot;:true,&quot;plaFormat&quot;:&quot;twoColumn&quot;,&quot;width&quot;:&quot;445px&quot;,&quot;type&quot;:&quot;ads&quot;,&quot;columns&quot;:1,&quot;horizontalAlignment&quot;:&quot;left&quot;,&quot;resultsPageQueryParam&quot;:&quot;query&quot;},&quot;master-1&quot;:{&quot;clicktrackUrl&quot;:&quot;http://www.tripadvisor.com/Commerce?p=GenericAds1&amp;geo=1&amp;from=Search&amp;area=MID&amp;slot=0&amp;cnt=0&amp;oos=0&amp;url=www.gtripadvisorg.com%2Faclk&amp;partnerKey=1&amp;urlKey=1dd5cccdc6f4d10e3&amp;author=GenericAds1&amp;channelid=search&amp;clt=G&amp;doNotRedirect=true&quot;,&quot;container&quot;:&quot;google_csa_ad_unit_MID&quot;,&quot;linkTarget&quot;:&quot;_blank&quot;,&quot;lines&quot;:2,&quot;colorTitleLink&quot;:&quot;#202d95&quot;,&quot;colorDomainLink&quot;:&quot;#589442&quot;,&quot;colorBackground&quot;:&quot;#faefd3&quot;,&quot;fontSizeTitle&quot;:&quot;12px&quot;,&quot;fontSizeDescription&quot;:&quot;11px&quot;,&quot;fontSizeDomainLink&quot;:&quot;11px&quot;,&quot;titleBold&quot;:1,&quot;rolloverLinkColor&quot;:&quot;#589442&quot;,&quot;clickableBackgrounds&quot;:true,&quot;adIconLocation&quot;:&quot;ad-left&quot;,&quot;domainLinkAboveDescription&quot;:true,&quot;plaFormat&quot;:&quot;twoColumn&quot;,&quot;width&quot;:&quot;276px&quot;,&quot;type&quot;:&quot;ads&quot;,&quot;columns&quot;:1,&quot;horizontalAlignment&quot;:&quot;left&quot;,&quot;resultsPageQueryParam&quot;:&quot;query&quot;}}" id="master-1" src="//www.google.com/uds/afs?q=Kailua%2C%20Hawaii%2C%20United%20States&amp;qry_lnk=Kailua%2C%20Hawaii%2C%20United%20States&amp;qry_ctxt=%20World&amp;adpage=1&amp;po=false&amp;type=0&amp;r=m&amp;fexp=21404%2C7000108%2C7000316&amp;client=tripadvisor-cpm2&amp;channel=search&amp;hl=en&amp;oe=UTF-8&amp;ie=UTF-8&amp;jsei=4&amp;format=n8%7Cn3&amp;ad=n11&amp;nocache=1021404429062631&amp;num=0&amp;output=uds_ads_only&amp;v=3&amp;u_his=2&amp;u_tz=480&amp;dt=1404429062633&amp;u_w=1366&amp;u_h=768&amp;biw=1286&amp;bih=659&amp;psw=1286&amp;psh=3227&amp;frm=0&amp;uio=uv3po0sr0sl0va1-af2wi276st12sd11sv11-af2wi445sd11sv11&amp;rurl=http%3A%2F%2Fwww.tripadvisor.com%2FSearch%3Fq%3DKailua%252C%2BHawaii%252C%2BUnited%2BStates%26geo%3D%26pid%3D3825%26returnTo%3D__2F__&amp;referer=http%3A%2F%2Fwww.tripadvisor.com%2F#master-1" style="visibility: visible; height: 196px;"></iframe></div> <div class="footer_note">Sponsored links *</div> </div>
+        </div>
+        <div class="ad iab_medRec header_refresh">
+          <div id="gpt-ad-300x250-300x600" class="adInner gptAd"><div id="google_ads_iframe_/5349/ta.ta.cn.s/default_2__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/5349/ta.ta.cn.s/default_2" name="google_ads_iframe_/5349/ta.ta.cn.s/default_2" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/5349/ta.ta.cn.s/default_2__hidden__" name="google_ads_iframe_/5349/ta.ta.cn.s/default_2__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- FOOTER -->
+  <footer style="border-top: solid 1px #e5e5e5" class="">
+    <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</div>
